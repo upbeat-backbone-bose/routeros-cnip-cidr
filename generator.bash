@@ -5,7 +5,7 @@ if [ ! -d "$WORK_DIR/tmp" ];then
   mkdir $WORK_DIR/tmp
 fi
 
-curl -s https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt -o $WORK_DIR/tmp/all_cn.txt && \
+curl -s https://raw.githubusercontent.com/IceCodeNew/4Share/master/geoip_china/china_ip_list.txt -o $WORK_DIR/tmp/all_cn.txt && \
 curl -s https://ispip.clang.cn/all_cn_ipv6.txt -o $WORK_DIR/tmp/all_cn_ipv6.txt && \
 cat > $WORK_DIR/dist/cn_ip_cidr.rsc << EOF
 /log info "Import cn ipv4 cidr list..."
