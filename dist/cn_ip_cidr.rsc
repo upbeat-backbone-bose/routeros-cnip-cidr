@@ -1,8 +1,6 @@
 /log info "Import cn ipv4 cidr list..."
 /ip firewall address-list remove [/ip firewall address-list find list=cn_ip_cidr]
 /ip firewall address-list
-:do {add address=# 22038216 routes were dumped from us-iad01-rs01cn-b at Fri Feb 25 08:00:06 UTC 2022. list=cn_ip_cidr} on-error={}
-:do {add address=# Found 42834 routes matching, aggregated to 3356. list=cn_ip_cidr} on-error={}
 :do {add address=1.2.4.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=1.8.1.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=1.8.8.0/24 list=cn_ip_cidr} on-error={}
@@ -591,6 +589,7 @@
 :do {add address=67.198.192.0/23 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.195.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.199.0/24 list=cn_ip_cidr} on-error={}
+:do {add address=67.198.201.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.207.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.208.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.221.0/24 list=cn_ip_cidr} on-error={}
