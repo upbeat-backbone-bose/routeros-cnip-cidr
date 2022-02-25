@@ -22,4 +22,4 @@ CN ip list script generator for MikroTik RouterOS
 
 [ispip.clang.cn](https://ispip.clang.cn/)
 
-[ipip](https://www.ipip.net/)
+[IceCodeNew](https://github.com/IceCodeNew/4Share)
