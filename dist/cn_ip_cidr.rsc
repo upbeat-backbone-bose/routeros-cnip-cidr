@@ -1,8 +1,8 @@
 /log info "Import cn ipv4 cidr list..."
 /ip firewall address-list remove [/ip firewall address-list find list=cn_ip_cidr]
 /ip firewall address-list
-:do {add address=# 22028586 routes were dumped from us-iad01-rs01cn-b at Fri Feb 25 07:00:06 UTC 2022. list=cn_ip_cidr} on-error={}
-:do {add address=# Found 42833 routes matching, aggregated to 3355. list=cn_ip_cidr} on-error={}
+:do {add address=# 22038216 routes were dumped from us-iad01-rs01cn-b at Fri Feb 25 08:00:06 UTC 2022. list=cn_ip_cidr} on-error={}
+:do {add address=# Found 42834 routes matching, aggregated to 3356. list=cn_ip_cidr} on-error={}
 :do {add address=1.2.4.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=1.8.1.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=1.8.8.0/24 list=cn_ip_cidr} on-error={}
@@ -591,7 +591,6 @@
 :do {add address=67.198.192.0/23 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.195.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.199.0/24 list=cn_ip_cidr} on-error={}
-:do {add address=67.198.201.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.207.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.208.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=67.198.221.0/24 list=cn_ip_cidr} on-error={}
@@ -2951,6 +2950,7 @@
 :do {add address=211.80.0.0/13 list=cn_ip_cidr} on-error={}
 :do {add address=211.88.0.0/15 list=cn_ip_cidr} on-error={}
 :do {add address=211.90.0.0/17 list=cn_ip_cidr} on-error={}
+:do {add address=211.90.128.0/18 list=cn_ip_cidr} on-error={}
 :do {add address=211.90.216.0/21 list=cn_ip_cidr} on-error={}
 :do {add address=211.90.224.0/19 list=cn_ip_cidr} on-error={}
 :do {add address=211.91.0.0/18 list=cn_ip_cidr} on-error={}
@@ -2970,6 +2970,7 @@
 :do {add address=211.93.0.0/17 list=cn_ip_cidr} on-error={}
 :do {add address=211.93.128.0/18 list=cn_ip_cidr} on-error={}
 :do {add address=211.93.192.0/21 list=cn_ip_cidr} on-error={}
+:do {add address=211.93.200.0/23 list=cn_ip_cidr} on-error={}
 :do {add address=211.93.204.0/22 list=cn_ip_cidr} on-error={}
 :do {add address=211.93.224.0/19 list=cn_ip_cidr} on-error={}
 :do {add address=211.94.64.0/18 list=cn_ip_cidr} on-error={}
