@@ -777,6 +777,7 @@
 :do {add address=103.31.200.0/22 list=cn_ip_cidr} on-error={}
 :do {add address=103.35.105.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=103.35.220.0/23 list=cn_ip_cidr} on-error={}
+:do {add address=103.35.254.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=103.36.28.0/22 list=cn_ip_cidr} on-error={}
 :do {add address=103.36.60.0/22 list=cn_ip_cidr} on-error={}
 :do {add address=103.36.96.0/22 list=cn_ip_cidr} on-error={}
@@ -3662,7 +3663,7 @@
 :do {add address=2404:f4c0:f600::/40 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f900::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f90a::/48 list=cn_ip_cidr} on-error={}
-:do {add address=2404:f4c0:f90e::/48 list=cn_ip_cidr} on-error={}
+:do {add address=2404:f4c0:f90e::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f940::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f942::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f944::/47 list=cn_ip_cidr} on-error={}
@@ -3768,7 +3769,6 @@
 :do {add address=2406:840:eabf::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb00::/45 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb08::/47 list=cn_ip_cidr} on-error={}
-:do {add address=2406:840:eb0a::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb0f::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb80::/43 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:edd1::/48 list=cn_ip_cidr} on-error={}
@@ -4444,7 +4444,7 @@
 :do {add address=2a0e:aa07:f004::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:aa07:f0d0::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:aa07:f0d2::/48 list=cn_ip_cidr} on-error={}
-:do {add address=2a0e:aa07:f0d4::/47 list=cn_ip_cidr} on-error={}
+:do {add address=2a0e:aa07:f0d4::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:16::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:1d0::/44 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:272::/48 list=cn_ip_cidr} on-error={}
