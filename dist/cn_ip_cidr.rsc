@@ -698,7 +698,6 @@
 :do {add address=101.254.32.0/19 list=cn_ip_cidr} on-error={}
 :do {add address=101.254.64.0/18 list=cn_ip_cidr} on-error={}
 :do {add address=101.254.128.0/17 list=cn_ip_cidr} on-error={}
-:do {add address=103.1.8.0/23 list=cn_ip_cidr} on-error={}
 :do {add address=103.1.168.0/22 list=cn_ip_cidr} on-error={}
 :do {add address=103.2.108.0/22 list=cn_ip_cidr} on-error={}
 :do {add address=103.2.204.0/22 list=cn_ip_cidr} on-error={}
@@ -3641,7 +3640,6 @@
 :do {add address=2404:ea80:700:696a::/64 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:1101::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:5000::/36 list=cn_ip_cidr} on-error={}
-:do {add address=2404:f4c0:6666::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:a000::/36 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:ea00::/40 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f000::/44 list=cn_ip_cidr} on-error={}
@@ -3651,7 +3649,7 @@
 :do {add address=2404:f4c0:f4cf::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f54e::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f600::/40 list=cn_ip_cidr} on-error={}
-:do {add address=2404:f4c0:f701::/48 list=cn_ip_cidr} on-error={}
+:do {add address=2404:f4c0:f700::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f70f::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f900::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2404:f4c0:f90a::/48 list=cn_ip_cidr} on-error={}
@@ -3713,6 +3711,7 @@
 :do {add address=2406:840:20::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:44::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:80::/47 list=cn_ip_cidr} on-error={}
+:do {add address=2406:840:90::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:100::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:110::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:300::/48 list=cn_ip_cidr} on-error={}
@@ -3750,7 +3749,6 @@
 :do {add address=2406:840:e14f::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:e180::/44 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:e20f::/48 list=cn_ip_cidr} on-error={}
-:do {add address=2406:840:e242::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:e360::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:e666::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:e770::/47 list=cn_ip_cidr} on-error={}
@@ -3761,7 +3759,6 @@
 :do {add address=2406:840:eabf::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb00::/45 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb08::/47 list=cn_ip_cidr} on-error={}
-:do {add address=2406:840:eb0a::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb0f::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:eb80::/43 list=cn_ip_cidr} on-error={}
 :do {add address=2406:840:edd1::/48 list=cn_ip_cidr} on-error={}
@@ -3811,6 +3808,7 @@
 :do {add address=2407:2440:4::/46 list=cn_ip_cidr} on-error={}
 :do {add address=2407:2840::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2407:5380::/32 list=cn_ip_cidr} on-error={}
+:do {add address=2407:53c0::/44 list=cn_ip_cidr} on-error={}
 :do {add address=2407:8b80::/32 list=cn_ip_cidr} on-error={}
 :do {add address=2407:9f00::/32 list=cn_ip_cidr} on-error={}
 :do {add address=2407:a640::/32 list=cn_ip_cidr} on-error={}
@@ -4444,8 +4442,8 @@
 :do {add address=2a0e:aa07:f0d0::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:aa07:f0d2::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:aa07:f0d4::/48 list=cn_ip_cidr} on-error={}
-:do {add address=2a0e:b107:16::/48 list=cn_ip_cidr} on-error={}
-:do {add address=2a0e:b107:1d0::/44 list=cn_ip_cidr} on-error={}
+:do {add address=2a0e:b107:1d7::/48 list=cn_ip_cidr} on-error={}
+:do {add address=2a0e:b107:1d9::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:272::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:580::/44 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:6d0::/44 list=cn_ip_cidr} on-error={}
@@ -4467,7 +4465,6 @@
 :do {add address=2a0e:b107:1787::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:17f0::/45 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:17f8::/47 list=cn_ip_cidr} on-error={}
-:do {add address=2a0e:b107:17fa::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0e:b107:17fe::/47 list=cn_ip_cidr} on-error={}
 :do {add address=2a0f:5707:ac01::/48 list=cn_ip_cidr} on-error={}
 :do {add address=2a0f:7980::/44 list=cn_ip_cidr} on-error={}
