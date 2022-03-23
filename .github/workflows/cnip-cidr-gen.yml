@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           path: ${{ github.workspace }}/routeros-cnip-cidr
 
@@ -23,8 +23,8 @@ jobs:
         run: |-
           cd $GITHUB_WORKSPACE/routeros-cnip-cidr/
           git diff
-          git config --global user.email "generator-bot@rookiezoe.com"
-          git config --global user.name "generator-bot"
+          git config --global user.email "action_bot@rookiezoe.com"
+          git config --global user.name "ActionBot"
           git add -A
           git commit -m "Update 'cn_ip_cidr.rsc'" || exit 0
           git push
