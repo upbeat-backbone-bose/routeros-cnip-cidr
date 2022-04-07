@@ -2,7 +2,7 @@ name: cnip-cidr-gen
 
 on:
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '0 16 */7 * *'
 
 jobs:
   build:
