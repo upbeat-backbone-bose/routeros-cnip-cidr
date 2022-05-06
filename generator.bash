@@ -15,7 +15,7 @@ cat > $WORK_DIR/dist/cn_ip_cidr.rsc << EOF
 EOF
 cat $WORK_DIR/tmp/all_cn.txt | awk '{ printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' >> $WORK_DIR/dist/cn_ip_cidr.rsc && \
 cat >> $WORK_DIR/dist/cn_ip_cidr.rsc << EOF
-:if ([:len [/system package find where name="ipv6" and disabled=no]] > 0) do={
+:if ([:len [/system package find where name="routeros" and version>7]] > 0) do={
 /log info "Import cn ipv6 cidr list..."
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=cn_ip_cidr]
 /ipv6 firewall address-list
