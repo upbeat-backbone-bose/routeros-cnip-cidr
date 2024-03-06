@@ -1,6 +1,6 @@
 # RouterOS CN IP List
 
-CN ip list script generator for MikroTik RouterOS
+CN ip list script generator for MikroTik RouterOS, Support Mikrotik 7.x
 
 [![status](https://img.shields.io/github/workflow/status/upbeat-backbone-bose/routeros-cnip-cidr/cnip-cidr-gen?color=34d058&label=cnip-cidr-gen&logo=github&logoColor=fff)](https://github.com/upbeat-backbone-bose/routeros-cnip-cidr/actions/workflows/cnip-cidr-gen.yml)
 
