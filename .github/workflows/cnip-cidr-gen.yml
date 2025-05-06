@@ -28,3 +28,4 @@ jobs:
           git add -A
           git commit -m "Update 'cn_ip_cidr.rsc'" || exit 0
           git push
+
