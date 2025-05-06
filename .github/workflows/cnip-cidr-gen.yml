@@ -25,7 +25,6 @@ jobs:
           git diff
           git config --global user.email "action_bot@rookiezoe.com"
           git config --global user.name "ActionBot"
-          git pull --rebase  # Pull remote changes and rebase the local branch
           git add -A
           git commit -m "Update 'cn_ip_cidr.rsc'" || exit 0
           git push
