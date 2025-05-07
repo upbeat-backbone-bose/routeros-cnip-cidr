@@ -3,6 +3,10 @@ name: cnip-cidr-gen
 on:
   schedule:
     - cron: '0 16 */15 * *'
+  workflow_dispatch:
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
