@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete outdate workflow runs
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const { owner, repo } = context.repo;
@@ -45,7 +45,7 @@ jobs:
                 console.log('>>>>>> Get error when listing workflow_runs:', e);
               });
       - name: Delete outdate releases
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const { owner, repo } = context.repo;
