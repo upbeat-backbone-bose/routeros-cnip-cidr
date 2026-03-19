@@ -3,7 +3,11 @@ set -euo pipefail
 WORK_DIR=$(cd $(dirname $0); pwd)
 
 if [ ! -d "$WORK_DIR/tmp" ];then
-  mkdir -p $WORK_DIR/tmp
+  mkdir -p "$WORK_DIR/tmp"
+fi
+
+if [ ! -d "$WORK_DIR/dist" ];then
+  mkdir -p "$WORK_DIR/dist"
 fi
 
 TMP_CIDR_V4="$WORK_DIR/tmp/all_cn.txt"
