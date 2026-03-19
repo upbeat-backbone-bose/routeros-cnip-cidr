@@ -23,6 +23,45 @@ jobs:
         run: |-
           bash $GITHUB_WORKSPACE/routeros-cnip-cidr/generator.bash
 
+      - name: Validate generated script
+        run: |-
+          cd $GITHUB_WORKSPACE/routeros-cnip-cidr/
+          
+          # Check file exists
+          if [ ! -f "dist/cn_ip_cidr.rsc" ]; then
+            echo "Error: dist/cn_ip_cidr.rsc not found"
+            exit 1
+          fi
+          
+          # Count total lines
+          TOTAL_LINES=$(wc -l < dist/cn_ip_cidr.rsc)
+          echo "Total lines: $TOTAL_LINES"
+          
+          # Count IPv4 entries
+          IPV4_COUNT=$(grep -c "^:do {add address=[0-9]" dist/cn_ip_cidr.rsc || echo "0")
+          echo "IPv4 entries: $IPV4_COUNT"
+          
+          # Count IPv6 entries
+          IPV6_COUNT=$(grep -c "^:do {add address=[0-9a-fA-F:]" dist/cn_ip_cidr.rsc || echo "0")
+          echo "IPv6 entries: $IPV6_COUNT"
+          
+          # Validate bracket balance
+          OPEN_BRACKETS=$(grep -o "{" dist/cn_ip_cidr.rsc | wc -l)
+          CLOSE_BRACKETS=$(grep -o "}" dist/cn_ip_cidr.rsc | wc -l)
+          echo "Brackets: { = $OPEN_BRACKETS, } = $CLOSE_BRACKETS"
+          if [ "$OPEN_BRACKETS" -ne "$CLOSE_BRACKETS" ]; then
+            echo "Error: Unbalanced brackets"
+            exit 1
+          fi
+          
+          # Verify IPv6 remove is inside version check block
+          if ! grep -A2 "version>7" dist/cn_ip_cidr.rsc | grep -q "ipv6 firewall address-list remove"; then
+            echo "Error: IPv6 remove not inside version check"
+            exit 1
+          fi
+          
+          echo "Validation passed!"
+
       - name: Commit and push if changed
         run: |-
           cd $GITHUB_WORKSPACE/routeros-cnip-cidr/
