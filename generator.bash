@@ -35,19 +35,16 @@ validate_ip_cidr "$TMP_CIDR_V6"
 cat > $WORK_DIR/dist/cn_ip_cidr.rsc << 'EOF'
 /log info "Import cn ipv4 cidr list..."
 /ip firewall address-list remove [/ip firewall address-list find list=cn_ip_cidr]
-/ipv6 firewall address-list remove [/ipv6 firewall address-list find list=cn_ip_cidr]
 /ip firewall address-list
 EOF
 
 awk '{ printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V4" >> $WORK_DIR/dist/cn_ip_cidr.rsc
 
 cat >> $WORK_DIR/dist/cn_ip_cidr.rsc << 'EOF'
-:global hasIPv6 false
 :if ([:len [/system package find where name="routeros" and version>7]] > 0) do={
-    :global hasIPv6 true
     /log info "Import cn ipv6 cidr list..."
+    /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=cn_ip_cidr]
     /ipv6 firewall address-list
-}
 EOF
 
 awk '{ printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V6" >> $WORK_DIR/dist/cn_ip_cidr.rsc
