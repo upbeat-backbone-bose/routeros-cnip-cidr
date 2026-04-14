@@ -131,21 +131,16 @@ fi
 
 awk '{ printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V4" >> "$DIST_DIR/cn_ip_cidr.rsc"
 
-cat >> "$DIST_DIR/cn_ip_cidr.rsc" << 'EOF'
-:global hasIPv6 false
-:if ([:len [/system package find where name="routeros" and version>7]] > 0) do={
-    :global hasIPv6 true
-    /log info "Import cn ipv6 cidr list..."
-    /ipv6 firewall address-list
-}
-EOF
-
 if [[ ! -s "$TMP_CIDR_V6" ]]; then
   echo "ERROR: IPv6 CIDR file is empty, skipping IPv6 generation" >&2
 else
+  cat >> "$DIST_DIR/cn_ip_cidr.rsc" << 'EOF'
+:if ([:len [/system package find where name="routeros" and version~"^7"]] > 0) do={
+    /log info "Import cn ipv6 cidr list..."
+    /ipv6 firewall address-list
+EOF
   awk '{ printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V6" >> "$DIST_DIR/cn_ip_cidr.rsc"
+  echo "}" >> "$DIST_DIR/cn_ip_cidr.rsc"
 fi
-
-echo "}" >> "$DIST_DIR/cn_ip_cidr.rsc"
 
 echo "Generation completed successfully: $DIST_DIR/cn_ip_cidr.rsc"
