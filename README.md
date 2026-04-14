@@ -10,6 +10,8 @@ CN IP CIDR list generator for MikroTik RouterOS, support IPv4/IPv6 dual stack.
 - IPv4 and IPv6 dual stack support (RouterOS 7+)
 - Automatic IP format validation
 - Bulk import with error tolerance
+- HTTP status code and file integrity verification
+- Detailed validation result output (valid/invalid/total counts)
 - Scheduled automatic updates (every 15 days)
 - Chinese IP ranges from multiple data sources
 
@@ -60,11 +62,13 @@ grep -c "add address=" dist/cn_ip_cidr.rsc
 ### Expected Output
 
 ```
+Downloaded IPv4 list: 3916 entries
 Validating IPv4 list...
-Valid: 3913, Invalid: 0
+Validation result (Valid: 3916, Invalid: 0, Total: 3916)
+Downloaded IPv6 list: 1448 entries
 Validating IPv6 list...
-Valid: 1680, Invalid: 0
-Generation completed: dist/cn_ip_cidr.rsc
+Validation result (Valid: 1448, Invalid: 0, Total: 1448)
+Generation completed successfully: dist/cn_ip_cidr.rsc
 ```
 
 ## Auto Update
