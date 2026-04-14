@@ -9,6 +9,10 @@ on:
         required: true
         default: 0
 
+permissions:
+  actions: write
+  contents: write
+
 jobs:
   del_runs:
     runs-on: ubuntu-latest
