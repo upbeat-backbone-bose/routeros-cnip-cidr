@@ -34,8 +34,8 @@ jobs:
             exit 0
           fi
           git diff
-          git config --global user.email "action_bot@rookiezoe.com"
-          git config --global user.name "ActionBot"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
           git add -A
           git commit -m "Update cn_ip_cidr.rsc"
           git push
