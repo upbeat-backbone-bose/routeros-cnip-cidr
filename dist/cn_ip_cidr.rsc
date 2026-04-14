@@ -3918,12 +3918,9 @@
 :do {add address=223.252.222.0/24 list=cn_ip_cidr} on-error={}
 :do {add address=223.255.236.0/22 list=cn_ip_cidr} on-error={}
 :do {add address=223.255.252.0/23 list=cn_ip_cidr} on-error={}
-:global hasIPv6 false
-:if ([:len [/system package find where name="routeros" and version>7]] > 0) do={
-    :global hasIPv6 true
+:if ([:len [/system package find where name="routeros" and version~"^7"]] > 0) do={
     /log info "Import cn ipv6 cidr list..."
     /ipv6 firewall address-list
-}
 :do {add address=2001:250::/31 list=cn_ip_cidr} on-error={}
 :do {add address=2001:252::/32 list=cn_ip_cidr} on-error={}
 :do {add address=2001:253::/39 list=cn_ip_cidr} on-error={}
