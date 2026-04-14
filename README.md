@@ -62,12 +62,12 @@ grep -c "add address=" dist/cn_ip_cidr.rsc
 ### Expected Output
 
 ```
-Downloaded IPv4 list: 3916 entries
+Downloaded IPv4 list: <count> entries
 Validating IPv4 list...
-Validation result (Valid: 3916, Invalid: 0, Total: 3916)
-Downloaded IPv6 list: 1448 entries
+Validation result (Valid: <count>, Invalid: 0, Total: <count>)
+Downloaded IPv6 list: <count> entries
 Validating IPv6 list...
-Validation result (Valid: 1448, Invalid: 0, Total: 1448)
+Validation result (Valid: <count>, Invalid: 0, Total: <count>)
 Generation completed successfully: dist/cn_ip_cidr.rsc
 ```
 
