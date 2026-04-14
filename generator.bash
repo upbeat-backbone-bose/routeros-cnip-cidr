@@ -129,7 +129,7 @@ if [[ ! -s "$TMP_CIDR_V4" ]]; then
   exit 1
 fi
 
-awk '{ gsub(/[^-.:0-9a-fA-F]/, "\\\\&"); printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V4" >> "$DIST_DIR/cn_ip_cidr.rsc"
+awk '{ printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V4" >> "$DIST_DIR/cn_ip_cidr.rsc"
 
 cat >> "$DIST_DIR/cn_ip_cidr.rsc" << 'EOF'
 :global hasIPv6 false
@@ -143,7 +143,7 @@ EOF
 if [[ ! -s "$TMP_CIDR_V6" ]]; then
   echo "ERROR: IPv6 CIDR file is empty, skipping IPv6 generation" >&2
 else
-  awk '{ gsub(/[^-.:0-9a-fA-F]/, "\\\\&"); printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V6" >> "$DIST_DIR/cn_ip_cidr.rsc"
+  awk '{ printf(":do {add address=%s list=cn_ip_cidr} on-error={}\n",$0) }' "$TMP_CIDR_V6" >> "$DIST_DIR/cn_ip_cidr.rsc"
 fi
 
 echo "}" >> "$DIST_DIR/cn_ip_cidr.rsc"
